@@ -31,7 +31,7 @@
                     $sql->bindParam(":RoomType", $roomType);
                     $sql->bindParam(":RoomPrice", $roomPrice);
                     $sql->bindParam(":RoomStatus", $roomStatus);
-                    $sql->bindParam(":RoomPicture", $Picture);
+                    $sql->bindParam(":RoomPicture", $filePath);
                     $sql->execute();
 
                     if ($sql) {

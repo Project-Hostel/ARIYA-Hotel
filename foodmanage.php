@@ -112,7 +112,6 @@
                 <td><?= $Data['FoodPrice']; ?></td>
                 <td width="250px"><img width="100%" src="picture/<?= basename($Data['FoodPicture']); ?>" class="rounded" alt=""></td>
                 <td>
-                    <a href="foodedit.php?FoodID=<?= $Data['FoodID']; ?>" class="btn btn-warning">Edit</a>
                     <a href="?delete=<?= $Data['FoodID']; ?>" class="btn btn-danger" onclick="return confirm('Are you sure?');">Delete</a>
                 </td>
             </tr>

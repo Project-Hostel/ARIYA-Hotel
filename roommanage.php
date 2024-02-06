@@ -11,7 +11,7 @@
         if ($deletestmt) {
             echo "<script>alert('Deleted');</script>";
             $_SESSION['session'] = "Deleted";
-            header("refresh:1; url=foodinsert.php");
+            header("refresh:1; url=roommanage.php");
         }
     }
 ?>
@@ -34,7 +34,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form action="foodupload.php" method="post" enctype="multipart/form-data">
+                <form action="roomupload.php" method="post" enctype="multipart/form-data">
                     <div class="mb-3">
                         <label for="roomname" class="col-form-label">Room Name:</label>
                         <input type="text" required class="form-control" name="roomname">
@@ -122,16 +122,14 @@
                     foreach ($foodData as $Data) {
             ?>
             <tr>
-                <th scope="row"><?= $Data['FoodID']; ?></th>
+                <th scope="row"><?= $Data['RoomID']; ?></th>
                 <td><?= $Data['RoomName']; ?></td>
                 <td><?= $Data['MaxGuest']; ?></td>
                 <td><?= $Data['RoomType']; ?></td>
                 <td><?= $Data['RoomPrice']; ?></td>
                 <td><?= $Data['RoomStatus']; ?></td>
-                <td><?= $Data['RoomPicture']; ?></td>
                 <td width="250px"><img width="100%" src="picture/<?= basename($Data['RoomPicture']); ?>" class="rounded" alt=""></td>
                 <td>
-                    <a href="roomedit.php?RoomID=<?= $Data['RoomID']; ?>" class="btn btn-warning">Edit</a>
                     <a href="?delete=<?= $Data['RoomID']; ?>" class="btn btn-danger" onclick="return confirm('Are you sure?');">Delete</a>
                 </td>
             </tr>
