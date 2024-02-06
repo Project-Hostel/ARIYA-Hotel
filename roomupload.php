@@ -8,7 +8,7 @@
         $roomType = $_POST['roomtype'];
         $roomPrice = $_POST['roomprice'];
         $roomStatus = $_POST['roomstatus'];
-        $Picture = $_FILES['picture'];
+        $Picture = $_FILES['roompicture'];
 
         $allow = array('jpg', 'jpeg', 'png');
         $extension = explode(".", $Picture['name']);
