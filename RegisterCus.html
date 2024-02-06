@@ -3,25 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-    <link rel="stylesheet" href="create.css">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="RegisCus.css">
 </head>
 <body>
-    <form action="RegisteractionCus.php" method="post">
-        <div class="k1" >
-            Register Customer
+    <div class="container">
+        <form method="post" action="RegisteractionCus.php" class="signup-form">
+            <div class="form-header">
+                <h2>Sign Up</h2>
+            </div>
+            <div class="form-content">
+                <label for="Username">Username</label>
+                <input type="text" name="Username" required>
+
+                <label for="Password">Password</label>
+                <input type="Password" name="Password" required>
+
+                <label for="Passwordconfirm">Passwordconfirm</label>
+                <input type="Passwordconfirm" name="Passwordconfirm" required>
+
+                <button type="submit" class="btn-signup">Sign Up</button>
+            </div>
+        </form>
+
+        <div class="login-section">
+            <h2>Already have an account?</h2><br>
+            <div class="btn-container">
+                <a href="Login.php" class="btn-login">Login</a>
+            </div>
         </div>
-        <div class="Rg-01">
-            Username <br>
-            <input name = 'Username' type="text"> <br>
-            Password <br>
-            <input name = 'Password' type="password"> <br>
-            Confirm Password <br>
-            <input name = 'Passwordconfirm' type="password">
-        </div>
-        <div class="btn-regis"> <br>
-        <button onclick="location.href = 'RegisteractionCus.php' " > Confirm </button>
     </div>
-    </form>
 </body>
 </html>

@@ -8,16 +8,16 @@
 </head>
 <body>
     <div class="container">
-        <form method="post" action="Login.action.php" class="login-form">
+        <form method="post" action="Loginaction.php" class="login-form">
             <div class="form-header">
                 <h2>Login</h2>
             </div>
             <div class="form-content">
                 <label for="username">Username</label>
-                <input type="text" name="username" required>
+                <input type="text" name="Username" required>
 
                 <label for="password">Password</label>
-                <input type="password" name="password" required>
+                <input type="password" name="Password" required>
 
                 <button type="submit" class="btn-login">Login</button>
             </div>
@@ -26,8 +26,8 @@
         <div class="signup-section">
             <h2>Don't have an account?</h2><br>
             <div class="btn-container">
-                <a href="register.html" class="btn-signup">Sign Up</a>
-                <a href="register.html" class="btn-signup">Sign Up</a>
+                <a href="RegisterEmp.html" class="btn-signup">Employee</a>
+                <a href="RegisterCus.html" class="btn-signup">Customer</a>
             </div>
         </div>
     </div>

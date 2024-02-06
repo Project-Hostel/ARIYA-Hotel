@@ -28,7 +28,7 @@ if ($Password =! $Passwordconfirm){
     }else {
 
         echo "สมัครสำเร็จ" ;
-        echo "<br><a href=Login.html > Back to login </a>";
+        echo "<br><a href=Login.php > Back to login </a>";
 
     }  
 }
