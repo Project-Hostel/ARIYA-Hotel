@@ -102,7 +102,7 @@
                 $foodData = $stmt->fetchAll();
 
                 if (!$foodData) {
-                    echo "<tr><td colspan='6' class='text-center'>Menu is empty</td></tr>";
+                    echo "<tr><td colspan='5' class='text-center'>Menu is empty</td></tr>";
                 } else {
                     foreach ($foodData as $Data) {
             ?>
