@@ -3,11 +3,13 @@
 $Username = $_POST["Username"];
 $Password = $_POST["Password"];
 $Passwordconfirm = $_POST["Passwordconfirm"];
+$Email = $_POST["Email"];
+$Phone = $_POST["Phone"];
 
 $conn = mysqli_connect("localhost","root","","hotelmini");
-$sql = "INSERT INTO empdata (Usernameemp,Passwordemp) VALUE ('$Username','$Password')";
+$sql = "INSERT INTO employee (EmpUsername,EmpPassword,EmpEmail,EmpPhone) VALUE ('$Username','$Password','$Email','$Phone')";
 
-$sql1 = "SELECT * FROM empdata WHERE 'Usernameemp' " ;
+$sql1 = "SELECT * FROM employee WHERE 'EmpUsername' " ;
 
 $result = mysqli_query($conn,$sql);
 
@@ -15,7 +17,11 @@ if ($Password =! $Passwordconfirm){
     
     echo "รหัสไม่ตรงกัน" ;
 
-}elseif ($sql =! 'Usernameemp'){
+}elseif (empty($Username) || empty($Password) || empty($Passwordconfirm) || empty($Email) || empty($Phone)){
+
+    echo "ห้ามว่าง" ;
+
+}elseif ($sql =! 'EmpUsername'){
 
     echo "ชื่อนี้มีคนใช้แล้ว" ;
 

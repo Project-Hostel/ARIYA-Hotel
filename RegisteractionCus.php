@@ -3,11 +3,13 @@
 $Username = $_POST["Username"];
 $Password = $_POST["Password"];
 $Passwordconfirm = $_POST["Passwordconfirm"];
+$Email = $_POST["Email"];
+$Phone = $_POST["Phone"];
 
 $conn = mysqli_connect("localhost","root","","hotelmini");
-$sql = "INSERT INTO userdata (username,password) VALUE ('$Username','$Password')";
+$sql = "INSERT INTO customer (CusUsername,CusPassword,CusEmail,CusPhone) VALUE ('$Username','$Password','$Email','$Phone')";
 
-$sql1 = "SELECT * FROM userdata WHERE 'username' " ;
+$sql1 = "SELECT * FROM customer WHERE 'CusUsername' " ;
 
 $result = mysqli_query($conn,$sql);
 
@@ -15,7 +17,11 @@ if ($Password =! $Passwordconfirm){
     
     echo "รหัสไม่ตรงกัน" ;
 
-}elseif ($sql =! 'username'){
+}elseif (empty($Username) || empty($Password) || empty($Passwordconfirm) || empty($Email) || empty($Phone)){
+
+    echo "ห้ามว่าง" ;
+
+}elseif ($sql =! 'CusUsername'){
 
     echo "ชื่อนี้มีคนใช้แล้ว" ;
 
@@ -28,7 +34,7 @@ if ($Password =! $Passwordconfirm){
     }else {
 
         echo "สมัครสำเร็จ" ;
-        echo "<br><a href=Login.php > Back to login </a>";
+        echo "<br><a href=Login.html > Back to login </a>";
 
     }  
 }
