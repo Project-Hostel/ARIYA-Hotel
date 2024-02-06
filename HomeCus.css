@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(19, 103, 19);
+    height: 100vh;
+    display: flex;
+    flex-direction: column; /* Adjust to a column layout */
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+    background: white;
+    padding: 20px;
+    border: solid 1px #ccc;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Add margin to create space between nav and welcome message */
+}
+
+nav a {
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    position: relative;
+    color: #333;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    opacity: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgb(9, 81, 46), transparent);
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.4s, opacity 0.4s;
+}
+
+nav a:hover::after {
+    width: 100%;
+    opacity: 1;
+}
+
+.welcome-message {
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+}
