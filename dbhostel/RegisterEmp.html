@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="Regis.css">
+</head>
+<body>
+    <div class="container">
+        <form method="post" action="regisEmpaction.php" class="signup-form">
+            <div class="form-header">
+                <h2>Sign Up Employee</h2>
+            </div>
+            <div class="form-content">
+                <label for="Email">Email</label>
+                <input type="text" name="EmpEmail" required>
+
+                <label for="Phone">Phone-Number</label>
+                <input type="text" name="EmpPhone" required>
+
+                <label for="Username">Name</label>
+                <input type="text" name="EmpName" required>
+
+                <label for="Username">Username</label>
+                <input type="text" name="EmpUsername" required>
+
+                <label for="Password">Password</label>
+                <input type="Password" name="EmpPassword" required>
+
+                <button type="submit" class="btn-signup">Sign Up</button>
+            </div>
+        </form>
+
+        <div class="login-section">
+            <h2>Already have an account?</h2><br>
+            <div class="btn-container">
+                <a href="Login.php" class="btn-login">Login</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
